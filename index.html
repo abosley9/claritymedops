@@ -58,11 +58,15 @@ h2 em{font-style:italic;color:var(--teal)}
 .services{background:var(--cream)}
 .results{background:var(--warm-white)}
 .results-lead{font-size:0.95rem;color:var(--muted);max-width:620px;line-height:1.8;font-weight:300;margin-bottom:2.5rem}
-.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;max-width:620px}
-.result-box{border:1px solid var(--border);border-top:3px solid var(--teal);padding:1.75rem 1.5rem;background:white}
-.result-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:400;color:var(--navy);line-height:1;margin-bottom:0.6rem}
-.result-num span{color:var(--teal);font-size:1.8rem}
-.result-label{font-size:0.85rem;color:var(--muted);line-height:1.6}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.case{border:1px solid var(--border);border-top:3px solid var(--teal);padding:2rem 1.75rem;background:white}
+.case-tag{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:0.6rem}
+.case h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);line-height:1.2;margin-bottom:0.75rem}
+.case p{font-size:0.88rem;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:1.5rem}
+.case-stats{display:flex;flex-wrap:wrap;gap:1.25rem 2rem;border-top:1px solid var(--border);padding-top:1.25rem}
+.result-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:400;color:var(--navy);line-height:1;margin-bottom:0.35rem}
+.result-num span{color:var(--teal);font-size:1.4rem}
+.result-label{font-size:0.78rem;color:var(--muted);line-height:1.5;max-width:150px}
 .results-note{font-size:0.75rem;color:var(--muted);margin-top:1.5rem;letter-spacing:0.02em}
 .services-intro{max-width:540px;margin-bottom:3.5rem}
 .services-intro p{font-size:0.95rem;color:var(--muted);line-height:1.8;font-weight:300}
@@ -210,13 +214,30 @@ footer a:hover{color:var(--teal-light)}
 
 <section id="results" class="results">
   <div class="section-label">Client Results</div>
-  <h2>Nearly 800 backlogged items <em>cleared in one month</em></h2>
-  <p class="results-lead">When a West Virginia FQHC brought Clarity in, its referral and diagnostic imaging queues had fallen behind. In our first month, we worked the backlog down and brought the queue current.</p>
-  <div class="results-grid">
-    <div class="result-box"><div class="result-num">~800</div><div class="result-label">Backlogged referral, imaging and prior authorization items cleared</div></div>
-    <div class="result-box"><div class="result-num">30<span> days</span></div><div class="result-label">To work through the backlog</div></div>
+  <h2>Backlogs cleared <em>in weeks, not months</em></h2>
+  <p class="results-lead">Two recent cleanups for practices whose referral and prior authorization work had fallen behind.</p>
+  <div class="cases">
+    <div class="case">
+      <div class="case-tag">Community health center &middot; West Virginia</div>
+      <h3>Nearly 800 backlogged items cleared in one month</h3>
+      <p>Referral, diagnostic imaging and prior authorization queues worked down and brought current.</p>
+      <div class="case-stats">
+        <div><div class="result-num">~800</div><div class="result-label">Backlogged items cleared</div></div>
+        <div><div class="result-num">30<span> days</span></div><div class="result-label">To a current queue</div></div>
+      </div>
+    </div>
+    <div class="case">
+      <div class="case-tag">Wound care &amp; vein clinic</div>
+      <h3>Incoming referrals and prior authorizations caught up in two weeks</h3>
+      <p>Cleared the incoming referral backlog and submitted prior authorizations for the clinic's vein and vascular services.</p>
+      <div class="case-stats">
+        <div><div class="result-num">~150</div><div class="result-label">Incoming referrals cleared</div></div>
+        <div><div class="result-num">~200</div><div class="result-label">Prior authorizations submitted</div></div>
+        <div><div class="result-num">2<span> weeks</span></div><div class="result-label">Start to finish</div></div>
+      </div>
+    </div>
   </div>
-  <p class="results-note">Client name withheld for confidentiality.</p>
+  <p class="results-note">Client names withheld for confidentiality.</p>
 </section>
 
 <section id="about" class="about">
