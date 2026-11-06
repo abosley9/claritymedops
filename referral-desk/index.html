@@ -30,7 +30,10 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--teal)}
 /* nav */
 .navbar{position:sticky;top:0;z-index:50;background:rgba(253,252,250,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-top:1.1rem;padding-bottom:1.1rem}
-.brand{text-decoration:none;color:var(--navy);line-height:1.2}
+.brand{line-height:1.2}
+.brand a{text-decoration:none;color:var(--navy)}
+.brand-home{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)!important}
+.brand-home:hover{color:var(--teal)!important}
 .brand b{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;display:block}
 .brand b span{color:var(--teal)}
 .brand small{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -167,8 +170,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 2rem;justify-content:space-bet
 
 <header class="navbar">
   <div class="wrap nav">
-    <a class="brand" href="/referral-desk/"><b>The Referral <span>Desk</span></b><small>by Clarity Med Operations</small></a>
+    <div class="brand"><a href="/referral-desk/"><b>The Referral <span>Desk</span></b></a><a class="brand-home" href="/">by Clarity Med Operations</a></div>
     <nav aria-label="Main">
+      <a href="/">Clarity Home</a>
       <a href="#features">Features</a>
       <a href="#updates">Updates</a>
       <a href="#pricing">Pricing</a>
