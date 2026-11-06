@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Referral Desk | Less searching. More referrals moving.</title>
-<meta name="description" content="Know if it needs a prior auth in seconds. PA Finder, a verified facility directory, eligibility checkers and note templates for West Virginia referral and PA staff.">
+<meta name="description" content="Fax-ready referral packets in minutes. A Smart Packet Builder, verified facility directory, referral forms and PA references for West Virginia referral coordinators.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap">
@@ -49,6 +49,9 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--teal)}
 .hero-side::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(26,127,110,.3) 0%,transparent 70%)}
 .hero-card{position:relative;background:var(--warm-white);padding:1.75rem;border-radius:2px;max-width:460px}
 .hero-card .eyebrow{margin-bottom:1rem}
+.checks{list-style:none;margin:1rem 0 0;padding:0;font-size:.85rem;color:#33424f}
+.checks li{position:relative;padding:.35rem 0 .35rem 1.6rem}
+.checks li::before{content:'';position:absolute;left:.2rem;top:.75rem;width:.55rem;height:.3rem;border-left:1.5px solid var(--teal);border-bottom:1.5px solid var(--teal);transform:rotate(-45deg)}
 .fake-input{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:2px;padding:.7rem .9rem;margin-bottom:.6rem;font-size:.9rem;background:#fff}
 .fake-input span{color:var(--muted);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;margin-left:auto}
 .result{border:1px solid var(--border);border-top:3px solid var(--teal);margin-top:1rem;background:#fff}
@@ -111,7 +114,7 @@ section{padding:6rem 0}
 .update div{flex:1 1 300px;min-width:0;color:var(--muted);font-size:.95rem}
 
 /* pricing */
-.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;align-items:stretch}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;align-items:stretch}
 .price{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);padding:2.2rem 1.9rem;border-radius:2px}
 .price.featured{background:var(--navy);border-color:var(--navy);color:#fff}
 .price h3{font-size:1.6rem;font-weight:300;margin:0 0 .3rem}
@@ -178,24 +181,29 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 2rem;justify-content:space-bet
 <div class="hero">
   <div class="hero-copy">
     <div class="eyebrow">Launching in West Virginia</div>
-    <h1>Less searching. <em>More referrals moving.</em></h1>
-    <p>A workspace for referral coordinators, with prior authorization guidance, verified facility contacts, referral forms and documentation tools in one place.</p>
+    <h1>Referral packets, <em>ready to fax in minutes.</em></h1>
+    <p>Add the provider's order and the patient's insurance card. The Referral Desk fills out the facility's referral form and puts together one fax-ready packet for you to review and send. Verified fax numbers, forms and PA references are there when you need them.</p>
     <div class="cta">
       <a class="btn btn-teal" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
       <a class="btn btn-line" href="#freebie">Free cheat sheet</a>
     </div>
   </div>
   <div class="hero-side">
-    <div class="hero-card" aria-label="Example PA Finder search">
-      <div class="eyebrow">PA Finder</div>
-      <div class="fake-input">93306 · Echo, complete <span>CPT</span></div>
-      <div class="fake-input">Aetna Better Health of WV <span>Insurance</span></div>
-      <div class="fake-input">Medicaid <span>Plan type</span></div>
+    <div class="hero-card" aria-label="Example Smart Packet Builder">
+      <div class="eyebrow">Smart Packet Builder</div>
+      <div class="fake-input">Provider order.pdf <span>Added</span></div>
+      <div class="fake-input">Insurance card.jpg <span>Added</span></div>
+      <ul class="checks">
+        <li>Same patient on the order and the card</li>
+        <li>Parkersburg Cardiology referral form filled in</li>
+        <li>Order, notes and insurance card attached</li>
+        <li>Signature line left blank for the provider</li>
+      </ul>
       <div class="result">
-        <div class="result-top"><small>Latest reference</small><div>No PA listed: confirm for this member</div></div>
-        <div class="result-body">Source: payer PA list · Checked on a set date<br><strong>Confirm in Availity →</strong></div>
+        <div class="result-top"><small>Ready to review</small><div>One fax-ready packet</div></div>
+        <div class="result-body">Referral form, order and card in one PDF<br><strong>Review, then fax →</strong></div>
       </div>
-      <div class="example">Example result. A reference, not a coverage determination.</div>
+      <div class="example">Example only. Fictional patient.</div>
     </div>
     <div class="hero-tagline">Built by a referral coordinator, for referral coordinators.</div>
   </div>
@@ -257,9 +265,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 2rem;justify-content:space-bet
     <div class="story-copy">
       <div class="eyebrow">Why we built it</div>
       <h2>Built by someone who knows the referral process <em>firsthand</em></h2>
-      <p>After managing high-volume referrals, diagnostic imaging orders, and prior authorizations for healthcare organizations, one thing became clear: referral coordinators spend far too much time searching for information that should be easy to find.</p>
-      <p>From locating the correct department fax number to navigating payer requirements and facility-specific documentation, these small obstacles add up.</p>
-      <p>We created The Referral Desk to bring those essential resources together in one organized, accessible workspace, so coordinators can spend less time searching and more time getting patients scheduled.</p>
+      <p>After managing high-volume referrals, diagnostic imaging orders, and prior authorizations for healthcare organizations, one thing became clear: the paperwork often takes longer than the referral itself.</p>
+      <p>Every facility has its own referral form. Each one means retyping the same patient details from the order, finding the right fax number, attaching the insurance card and notes, and double-checking that nothing was missed. Across a full queue, that adds up to hours.</p>
+      <p>We created The Referral Desk to take that work off the coordinator's plate. Add the order and the insurance card, and it builds the packet for you to review and send, with the facility contacts and forms you need in one place.</p>
       <div class="sig">Amanda Bosley<small>Founder, Clarity Med Operations</small></div>
     </div>
     <div class="facts">
@@ -326,31 +334,18 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 2rem;justify-content:space-bet
         </ul>
         <a class="btn btn-line" href="https://tally.so/r/9NXWZQ">Join free</a>
       </div>
-      <div class="price">
-        <h3>PA Finder</h3>
-        <p class="for">For PA lookups and portal steps</p>
-        <div class="amount">$19<small>/month</small></div>
-        <div class="billing">Individual · $190/year</div>
-        <ul>
-          <li>Unlimited PA Finder searches</li>
-          <li>Source, date checked and portal link</li>
-          <li>Submission steps and what to have ready</li>
-          <li>Payer change alerts</li>
-        </ul>
-        <a class="btn btn-navy" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
-      </div>
       <div class="price featured">
         <h3>Workflow Pro</h3>
         <p class="for">For coordinators and medical VAs</p>
         <div class="amount">$39<small>/month</small></div>
         <div class="billing">Full workspace · $390/year</div>
         <ul>
-          <li>Everything in PA Finder</li>
+          <li>Smart Packet Builder: 25 packets a month <em>(coming soon)</em></li>
+          <li>PA references with source, date checked and portal link</li>
           <li>Full directory: fax, phone, forms, what to send</li>
           <li>Note builder and one-click templates</li>
           <li>Screening criteria checks</li>
           <li>Tracker, PA log and appeal templates</li>
-          <li>Smart Packet Builder: 25 packets a month <em>(coming soon)</em></li>
         </ul>
         <a class="btn btn-teal" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
       </div>
