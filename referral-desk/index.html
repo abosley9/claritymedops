@@ -117,8 +117,11 @@ section{padding:6rem 0}
 .update div{flex:1 1 300px;min-width:0;color:var(--muted);font-size:.95rem}
 
 /* pricing */
-.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;align-items:stretch}
-.price{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);padding:2.2rem 1.9rem;border-radius:2px}
+.prices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem;align-items:stretch}
+@media (max-width:1000px){.prices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.prices{grid-template-columns:minmax(0,1fr)}}
+.price .flag{align-self:flex-start;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:2px 7px;border-radius:2px;margin-bottom:.8rem}
+.price{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);padding:2rem 1.5rem;border-radius:2px}
 .price.featured{background:var(--navy);border-color:var(--navy);color:#fff}
 .price h3{font-size:1.6rem;font-weight:300;margin:0 0 .3rem}
 .price.featured h3{color:#fff}
@@ -323,64 +326,63 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 2rem;justify-content:space-bet
     <div class="section-head">
       <div class="eyebrow">Pricing</div>
       <h2>Simple plans, <em>founding member prices</em></h2>
-      <p>Start free. Cancel anytime. Annual billing includes 2 months free.</p>
+      <p>Cancel anytime. Annual billing includes 2 months free.</p>
     </div>
     <div class="prices">
       <div class="price">
-        <h3>Directory Preview</h3>
-        <p class="for">See what's covered before you subscribe</p>
-        <div class="amount">Free</div>
-        <div class="billing">No credit card</div>
-        <ul>
-          <li>Browse facilities by town and specialty</li>
-          <li>Free fax &amp; form cheat sheet</li>
-          <li>Monthly "what changed" email</li>
-        </ul>
-        <a class="btn btn-line" href="https://tally.so/r/9NXWZQ">Join free</a>
-      </div>
-      <div class="price featured">
         <h3>Workflow Pro</h3>
         <p class="for">For coordinators and medical VAs</p>
         <div class="amount">$39<small>/month</small></div>
-        <div class="billing">Full workspace · $390/year</div>
+        <div class="billing">or $390/year, 2 months free</div>
         <ul>
-          <li>Smart Packet Builder: 50 packets a month <em>(coming soon)</em></li>
-          <li>Need more? Add extra packets anytime</li>
-          <li>PA references with source, date checked and portal link</li>
-          <li>Full directory: fax, phone, forms, what to send</li>
-          <li>Note builder and one-click templates</li>
-          <li>Screening criteria checks</li>
-          <li>Tracker, PA log and appeal templates</li>
+          <li>50 packets a month</li>
+          <li>PA references with source and date checked</li>
+          <li>Full directory and forms library</li>
         </ul>
-        <a class="btn btn-teal" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
+        <a class="btn btn-navy" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
       </div>
       <div class="price">
         <h3>Packet Pro</h3>
         <p class="for">For high-volume referral desks</p>
         <div class="amount">$79<small>/month</small></div>
-        <div class="billing">More packets · $790/year</div>
+        <div class="billing">or $790/year, 2 months free</div>
         <ul>
+          <li>150 packets a month</li>
           <li>Everything in Workflow Pro</li>
-          <li>Smart Packet Builder: 150 packets a month <em>(coming soon)</em></li>
-          <li>Need more? Add extra packets anytime</li>
         </ul>
         <a class="btn btn-navy" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
       </div>
-      <div class="price">
-        <h3>Clinic Team</h3>
+      <div class="price featured">
+        <span class="flag">Best for teams</span><h3>Clinic Team</h3>
         <p class="for">For the whole referral and front desk team</p>
         <div class="amount">$129<small>/month</small></div>
-        <div class="billing">Up to 5 users · $1,290/year</div>
+        <div class="billing">or $1,290/year, 2 months free</div>
         <ul>
-          <li>Everything in Workflow Pro, for 5 users</li>
-          <li>Smart Packet Builder: 300 packets a month, shared by the team <em>(coming soon)</em></li>
-          <li>Need more? Add extra packets anytime</li>
+          <li>5 separate logins, one for each person</li>
+          <li>300 packets a month, shared by the team</li>
+          <li>Up to 10 of your facilities' forms added at signup</li>
+          <li>Team account management: add or remove users and see usage</li>
           <li>Extra users $20/month each</li>
-          <li>Request facilities and payers we don't list yet</li>
+        </ul>
+        <a class="btn btn-teal" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
+      </div>
+      <div class="price">
+        <span class="flag">Your forms added</span><h3>Clinic Plus</h3>
+        <p class="for">For busy clinics with their own facility forms</p>
+        <div class="amount">$199<small>/month</small></div>
+        <div class="billing">or $1,990/year, 2 months free</div>
+        <ul>
+          <li>8 separate logins, one for each person</li>
+          <li>600 packets a month, shared by the team</li>
+          <li>Up to 25 of your facilities' forms added at signup</li>
+          <li>3 new forms added every month</li>
+          <li>Priority help</li>
+          <li>Extra users $20/month each</li>
         </ul>
         <a class="btn btn-navy" href="https://tally.so/r/9NXWZQ">Join the waitlist</a>
       </div>
     </div>
+    <p class="price-note">Don't see your facilities' forms? Send them to us and we'll add them, usually within a few business days. Extra forms beyond your plan are $25 each.</p>
   </div>
 </section>
 
